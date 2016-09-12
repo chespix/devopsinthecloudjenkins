@@ -19,7 +19,7 @@
         <hudson.model.StringParameterDefinition>
           <name>KeyName</name>
           <description></description>
-          <defaultValue>DharmaMaster-us-west-1</defaultValue>
+          <defaultValue>Dharma-master-us-west-1</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
