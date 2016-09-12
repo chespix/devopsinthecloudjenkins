@@ -10,7 +10,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:dharmatec/devopsinthecloudpuppet.git</url>
+        <url>git@github.com:chespix/devopsinthecloudpuppet.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
