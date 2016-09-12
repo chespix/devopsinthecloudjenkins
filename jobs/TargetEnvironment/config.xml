@@ -9,17 +9,17 @@
         <hudson.model.StringParameterDefinition>
           <name>PrivateBucket</name>
           <description></description>
-          <defaultValue>stelligentlabs-private</defaultValue>
+          <defaultValue>production-devopsinthecloud-secrets</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PublicBucket</name>
           <description></description>
-          <defaultValue>stelligentlabs</defaultValue>
+          <defaultValue>production-devopsinthecloud-artifacts</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KeyName</name>
           <description></description>
-          <defaultValue>ditc</defaultValue>
+          <defaultValue>DharmaMaster-us-west-1</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -30,12 +30,12 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:stelligent/devopsinthecloud.git</url>
+        <url>git@github.com:chespix/devopsinthecloud.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>master</name>
+        <name>production</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <disableSubmodules>false</disableSubmodules>
@@ -93,8 +93,8 @@ ruby /usr/share/tomcat6/scripts/aws/create_config_domain.rb</command>
     <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.CloudFormationBuildWrapper>
       <stacks>
         <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.StackBean>
-          <stackName>test</stackName>
-          <description>test stack</description>
+          <stackName>ProductionTest</stackName>
+          <description>production test stack of ruby app</description>
           <cloudFormationRecipe>infrastructure/templates/target.template</cloudFormationRecipe>
           <parameters>PublicBucket=${PublicBucket}, PrivateBucket=${PrivateBucket},KeyName=${KeyName}</parameters>
           <timeout>2500</timeout>

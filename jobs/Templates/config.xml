@@ -10,12 +10,12 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:stelligent/devopsinthecloud.git</url>
+        <url>git@github.com:chespix/devopsinthecloud.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>master</name>
+        <name>production</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <disableSubmodules>false</disableSubmodules>
@@ -52,27 +52,19 @@
   <builders/>
   <publishers>
     <hudson.plugins.s3.S3BucketPublisher>
-      <profileName>stelligentlabs</profileName>
+      <profileName>dharmatec</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/templates</bucket>
+          <bucket>production-devopsinthecloud-artifacts/templates</bucket>
           <sourceFile>infrastructure/templates/target.template</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/templates</bucket>
+          <bucket>production-devopsinthecloud-artifacts/templates</bucket>
           <sourceFile>infrastructure/templates/jenkins.template</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/templates</bucket>
-          <sourceFile>infrastructure/templates/account_bucket_policies.template</sourceFile>
-        </hudson.plugins.s3.Entry>
-        <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/templates</bucket>
-          <sourceFile>infrastructure/templates/myjenkins.template</sourceFile>
-        </hudson.plugins.s3.Entry>
-        <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/templates</bucket>
-          <sourceFile>infrastructure/templates/mytarget.template</sourceFile>
+          <bucket>production-devopsinthecloud-artifacts/templates</bucket>
+          <sourceFile>infrastructure/templates/environment_buckets.template</sourceFile>
         </hudson.plugins.s3.Entry>
       </entries>
     </hudson.plugins.s3.S3BucketPublisher>

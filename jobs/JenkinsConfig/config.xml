@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Takes latest files from GitHub and pushes them to &quot;PublicBucket&quot; S3 (e.g. https://s3.amazonaws.com/stelligentlabs/scripts/jenkins/jenkins_versioning.sh)</description>
+  <description>Takes latest files from GitHub and pushes them to &quot;PublicBucket&quot; S3 </description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.plugins.git.GitSCM">
@@ -10,12 +10,12 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:stelligent/devopsinthecloud.git</url>
+        <url>git@github.com:chespix/devopsinthecloud.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>master</name>
+        <name>production</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <disableSubmodules>false</disableSubmodules>
@@ -52,30 +52,30 @@
   <builders/>
   <publishers>
     <hudson.plugins.s3.S3BucketPublisher>
-      <profileName>stelligentlabs</profileName>
+      <profileName>dharmatec</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/aws/sqs_receive_message.rb</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/aws/sqs_send_message.rb</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/aws/terminate.rb</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/jenkins/jenkins_versioning.sh</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/aws/create_config_domain.rb</sourceFile>
         </hudson.plugins.s3.Entry>
         <hudson.plugins.s3.Entry>
-          <bucket>ditcnjdartifacts/scripts/aws</bucket>
+          <bucket>production-devopsinthecloud-artifacts/scripts/aws</bucket>
           <sourceFile>scripts/aws/showback_domain.rb</sourceFile>
         </hudson.plugins.s3.Entry>
       </entries>

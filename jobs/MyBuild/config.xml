@@ -10,7 +10,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:PaulDuvall/sample_app.git</url>
+        <url>git@github.com:dedero/sample_app.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -66,10 +66,10 @@ rspec spec/</command>
   </builders>
   <publishers>
     <hudson.plugins.s3.S3BucketPublisher>
-      <profileName>stelligentlabs</profileName>
+      <profileName>dharmatec</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
-          <bucket>stelligentlabs</bucket>
+          <bucket>dharmatec</bucket>
           <sourceFile>devopsinthecloud.tar.gz </sourceFile>
         </hudson.plugins.s3.Entry>
       </entries>

@@ -10,7 +10,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name></name>
         <refspec></refspec>
-        <url>git@github.com:PaulDuvall/devopsinthecloud.git</url>
+        <url>git@github.com:dedero/devopsinthecloud.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -57,8 +57,8 @@ ruby /usr/share/tomcat6/sqs_send_message.rb CloudFormationStacks $AWS_ACCESS_KEY
     <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.CloudFormationBuildWrapper>
       <stacks>
         <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.StackBean>
-          <stackName>test</stackName>
-          <description>test desc</description>
+          <stackName>PersonalTest</stackName>
+          <description>personal test env for ruby app</description>
           <cloudFormationRecipe>infrastructure/templates/target.template</cloudFormationRecipe>
           <parameters></parameters>
           <timeout>2500</timeout>

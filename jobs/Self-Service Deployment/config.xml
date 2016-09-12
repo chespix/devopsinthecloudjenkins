@@ -16,8 +16,8 @@
           <description>The type of environment you wish to deploy to</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>Dev</string>
-              <string>Test</string>
+              <string>Development</string>
+              <string>Testing</string>
               <string>Performance</string>
               <string>Production</string>
             </a>
