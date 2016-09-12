@@ -47,7 +47,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>instance_ip=`ruby /usr/share/tomcat6/scripts/aws/sqs_receive_message.rb Deployment`
+      <command>instance_ip=`ruby /usr/share/tomcat6/scripts/aws/sqs_receive_message.rb production-devopsinthecloud-deployment`
 echo $instance_ip
 
 cd $WORKSPACE/deployment/
