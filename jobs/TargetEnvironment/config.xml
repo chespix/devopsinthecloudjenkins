@@ -7,14 +7,14 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
-          <name>PrivateBucket</name>
+          <name>Environment</name>
           <description></description>
-          <defaultValue>production-devopsinthecloud-secrets</defaultValue>
+          <defaultValue>production</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>PublicBucket</name>
+          <name>Project</name>
           <description></description>
-          <defaultValue>production-devopsinthecloud-artifacts</defaultValue>
+          <defaultValue>devopsinthecloud</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>KeyName</name>
@@ -96,7 +96,7 @@ ruby /usr/share/tomcat6/scripts/aws/create_config_domain.rb</command>
           <stackName>ProductionTest</stackName>
           <description>production test stack of ruby app</description>
           <cloudFormationRecipe>infrastructure/templates/target.template</cloudFormationRecipe>
-          <parameters>PublicBucket=${PublicBucket}, PrivateBucket=${PrivateBucket},KeyName=${KeyName}</parameters>
+          <parameters>Environment=${Environment}, Project=${Project},KeyName=${KeyName}</parameters>
           <timeout>2500</timeout>
           <awsAccessKey>$AWS_ACCESS_KEY</awsAccessKey>
           <awsSecretKey>$AWS_SECRET_ACCESS_KEY</awsSecretKey>
