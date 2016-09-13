@@ -57,11 +57,10 @@ bundle install --without production</command>
     <hudson.tasks.Shell>
       <command>rake db:migrate
 rake db:test:prepare
-~/bin/rspec spec/
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>tar -czf devopsinthecloud.tar.gz *</command>
+      <command>tar -czf devopsinthecloud.tar.gz --exclude=devopsinthecloud.tar.gz *</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
