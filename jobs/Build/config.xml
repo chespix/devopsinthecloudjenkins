@@ -52,7 +52,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>ruby -v
-bundle install</command>
+bundle install --without production</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>rake db:migrate
