@@ -66,10 +66,10 @@ rspec spec/</command>
   </builders>
   <publishers>
     <hudson.plugins.s3.S3BucketPublisher>
-      <profileName>dharmatec</profileName>
+      <profileName>chespi</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
-          <bucket>dharmatec</bucket>
+          <bucket>chespi</bucket>
           <sourceFile>devopsinthecloud.tar.gz </sourceFile>
         </hudson.plugins.s3.Entry>
       </entries>

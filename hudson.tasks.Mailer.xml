@@ -2,9 +2,9 @@
 <hudson.tasks.Mailer_-DescriptorImpl>
   <helpRedirect/>
   <hudsonUrl>http://production-devopsinthecloud-jenkins.chespi.org:8080/jenkins/</hudsonUrl>
-  <smtpAuthUsername>info@dharmatec.com.ar</smtpAuthUsername>
+  <smtpAuthUsername>info@chespi.org</smtpAuthUsername>
   <smtpAuthPassword>y+RDQ0DPIEFsvX3rbjWBKxz1AoeLtUJcvZU4XtsUYI2Oz5/i5g9Z4L2vFU9wOjamp9qCIm5G5HpaTgvwZj8SIQ==</smtpAuthPassword>
-  <adminAddress>admin@dharmatec.com.ar</adminAddress>
+  <adminAddress>admin@chespi.org</adminAddress>
   <smtpHost>smtp.gmail.com</smtpHost>
   <useSsl>true</useSsl>
   <smtpPort>465</smtpPort>

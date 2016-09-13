@@ -66,7 +66,7 @@ rake db:test:prepare
   </builders>
   <publishers>
     <hudson.plugins.s3.S3BucketPublisher>
-      <profileName>dharmatec</profileName>
+      <profileName>chespi</profileName>
       <entries>
         <hudson.plugins.s3.Entry>
           <bucket>production-devopsinthecloud-artifacts</bucket>
