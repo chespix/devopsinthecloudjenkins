@@ -67,14 +67,14 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cucumber $WORKSPACE/test/features/target.feature env_ip=${test_InstanceIPAddress} env_user=ec2-user
+      <command>cucumber $WORKSPACE/test/features/target.feature env_ip=${TestProdTarget_InstanceIPAddress} env_user=ec2-user
 
-ruby /usr/share/tomcat6/scripts/aws/sqs_send_message.rb production-devopsinthecloud-deployment ${test_InstanceIPAddress}
-ruby /usr/share/tomcat6/scripts/aws/sqs_send_message.rb production-devopsinthecloud-cfstack ${test_StackName}</command>
+ruby /usr/share/tomcat6/scripts/aws/sqs_send_message.rb production-devopsinthecloud-deployment ${TestProdTarget_InstanceIPAddress}
+ruby /usr/share/tomcat6/scripts/aws/sqs_send_message.rb production-devopsinthecloud-cfstack ${TestProdTarget_StackName}</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>echo &quot;domain=${test_Domain}&quot; &gt;&gt; /tmp/properties
-echo &quot;artifact_bucket=${test_ArtifactBucket}&quot; &gt;&gt; /tmp/properties
+      <command>echo &quot;domain=${TestProdTarget_Domain}&quot; &gt;&gt; /tmp/properties
+echo &quot;artifact_bucket=${TestProdTarget_ArtifactBucket}&quot; &gt;&gt; /tmp/properties
 
 ruby /usr/share/tomcat6/scripts/aws/create_config_domain.rb</command>
     </hudson.tasks.Shell>
@@ -93,7 +93,7 @@ ruby /usr/share/tomcat6/scripts/aws/create_config_domain.rb</command>
     <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.CloudFormationBuildWrapper>
       <stacks>
         <com.syncapse.jenkinsci.plugins.awscloudformationwrapper.StackBean>
-          <stackName>ProductionTest</stackName>
+          <stackName>TestProdTarget</stackName>
           <description>production test stack of ruby app</description>
           <cloudFormationRecipe>infrastructure/templates/target.template</cloudFormationRecipe>
           <parameters>Environment=${Environment}, Project=${Project},KeyName=${KeyName}</parameters>
